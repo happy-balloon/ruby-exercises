@@ -47,5 +47,5 @@ end
 def find_favorite(array_of_hash_objects)
   hash = nil
   array_of_hash_objects.each {|h|  h[:is_my_favorite?] ? hash=h : nil}
-  hash
+  hash.values_at(:name)
 end
