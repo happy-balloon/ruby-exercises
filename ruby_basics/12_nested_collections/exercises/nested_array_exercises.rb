@@ -29,12 +29,18 @@ end
 
 def count_empty_seats(chart)
   x = 0
-  
-  chart.map do |row|
-    row.map do |col|
-      x += 1 if col == nil
+
+  chart.select do |row|
+    row.select do |seat|
+      x+=1 if seat == nil
     end
   end
+  
+  # chart.map do |row|
+  #   row.map do |col|
+  #     x += 1 if col == nil
+  #   end
+  # end
   x
 end
 
